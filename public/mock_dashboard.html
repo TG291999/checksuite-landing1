@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1440, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-slate-900 h-screen flex overflow-hidden">
+    <aside class="w-64 border-r border-purple-100 flex flex-col bg-[#faf5ff]/50">
+        <div class="h-16 flex items-center px-6 border-b border-purple-100">
+            <div class="flex items-center gap-2 text-[#6D28D9] font-bold text-xl">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                CheckSuite
+            </div>
+        </div>
+        <nav class="flex-1 p-4 space-y-1">
+            <a href="#"
+                class="flex items-center gap-3 px-3 py-2 text-sm font-medium bg-white text-[#6D28D9] rounded-lg shadow-sm border border-purple-100">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+                Dashboard
+            </a>
+            <a href="#"
+                class="flex items-center gap-3 px-3 py-2 text-sm font-medium text-slate-600 hover:bg-purple-50 rounded-lg transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M9 11l3 3L22 4"></path>
+                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                </svg>
+                Meine Aufgaben
+            </a>
+            <a href="#"
+                class="flex items-center gap-3 px-3 py-2 text-sm font-medium text-slate-600 hover:bg-purple-50 rounded-lg transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                Team
+            </a>
+            <a href="#"
+                class="flex items-center gap-3 px-3 py-2 text-sm font-medium text-slate-600 hover:bg-purple-50 rounded-lg transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+                Vorlagen
+            </a>
+        </nav>
+        <div class="p-4 border-t border-purple-100">
+            <div class="flex items-center gap-3">
+                <div
+                    class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center text-[#6D28D9] font-bold text-xs">
+                    SM</div>
+                <div class="text-sm">
+                    <p class="font-medium text-slate-900">Stefan Meier</p>
+                    <p class="text-xs text-slate-500">Admin</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <main class="flex-1 bg-white flex flex-col">
+        <header class="h-16 border-b border-purple-50 flex items-center justify-between px-8">
+            <h1 class="text-xl font-semibold text-slate-900">Guten Morgen, Stefan! 👋</h1>
+            <div class="flex items-center gap-4">
+                <button class="p-2 text-slate-400 hover:text-[#6D28D9] transition-colors"><svg class="w-5 h-5"
+                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                    </svg></button>
+                <button
+                    class="bg-[#6D28D9] text-white px-4 py-2 rounded-md text-sm font-medium shadow-lg shadow-purple-200 hover:bg-[#5b21b6] transition-all hover:shadow-purple-300">+
+                    Neuer Vorgang</button>
+            </div>
+        </header>
+
+        <div class="p-8 overflow-auto">
+            <div class="grid grid-cols-4 gap-6 mb-10">
+                <div
+                    class="p-5 rounded-xl border border-purple-50 shadow-[0_2px_10px_-4px_rgba(109,40,217,0.1)] bg-white">
+                    <p class="text-sm text-slate-500 mb-1">Offene Aufgaben</p>
+                    <p class="text-3xl font-bold text-slate-900">12</p>
+                </div>
+                <div
+                    class="p-5 rounded-xl border border-purple-50 shadow-[0_2px_10px_-4px_rgba(109,40,217,0.1)] bg-white">
+                    <p class="text-sm text-slate-500 mb-1">Überfällig</p>
+                    <p class="text-3xl font-bold text-red-600">2</p>
+                </div>
+                <div
+                    class="p-5 rounded-xl border border-purple-50 shadow-[0_2px_10px_-4px_rgba(109,40,217,0.1)] bg-white">
+                    <p class="text-sm text-slate-500 mb-1">Aktive Checklisten</p>
+                    <p class="text-3xl font-bold text-slate-900">8</p>
+                </div>
+                <div
+                    class="p-5 rounded-xl border border-purple-50 shadow-[0_2px_10px_-4px_rgba(109,40,217,0.1)] bg-white">
+                    <p class="text-sm text-slate-500 mb-1">Erledigt (Woche)</p>
+                    <p class="text-3xl font-bold text-emerald-600">24</p>
+                </div>
+            </div>
+            <h2 class="text-lg font-semibold text-slate-900 mb-6 flex items-center gap-2">
+                <svg class="w-5 h-5 text-[#6D28D9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                Dein Tagesfokus
+            </h2>
+            <div class="space-y-4 max-w-3xl">
+                <div
+                    class="flex items-center p-4 rounded-xl border border-purple-100 bg-white hover:border-[#6D28D9] hover:shadow-[0_4px_20px_-8px_rgba(109,40,217,0.15)] transition-all group cursor-pointer">
+                    <div
+                        class="w-6 h-6 rounded-full border-2 border-slate-200 mr-4 group-hover:border-[#6D28D9] transition-colors">
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span
+                                class="text-xs font-semibold px-2 py-0.5 rounded-full bg-red-50 text-red-700">Dringend</span>
+                            <span class="text-xs text-slate-500">Mitarbeiter Onboarding</span>
+                        </div>
+                        <h3 class="font-medium text-slate-900">Zugänge für Peter Müller einrichten</h3>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="flex -space-x-2">
+                            <div
+                                class="w-8 h-8 rounded-full bg-blue-50 border-2 border-white flex items-center justify-center text-xs font-medium text-blue-700">
+                                PM</div>
+                        </div>
+                        <span class="text-sm text-slate-400">Heute fällig</span>
+                    </div>
+                </div>
+                <div
+                    class="flex items-center p-4 rounded-xl border border-purple-100 bg-white hover:border-[#6D28D9] hover:shadow-[0_4px_20px_-8px_rgba(109,40,217,0.15)] transition-all group cursor-pointer">
+                    <div
+                        class="w-6 h-6 rounded-full border-2 border-slate-200 mr-4 group-hover:border-[#6D28D9] transition-colors">
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span
+                                class="text-xs font-semibold px-2 py-0.5 rounded-full bg-orange-50 text-orange-700">Mittel</span>
+                            <span class="text-xs text-slate-500">Finanzen</span>
+                        </div>
+                        <h3 class="font-medium text-slate-900">Rechnungen für Q4 prüfen</h3>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="text-sm text-slate-400">Morgen</span>
+                    </div>
+                </div>
+                <div
+                    class="flex items-center p-4 rounded-xl border border-purple-100 bg-white hover:border-[#6D28D9] hover:shadow-[0_4px_20px_-8px_rgba(109,40,217,0.15)] transition-all group cursor-pointer">
+                    <div
+                        class="w-6 h-6 rounded-full border-2 border-slate-200 mr-4 group-hover:border-[#6D28D9] transition-colors">
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span
+                                class="text-xs font-semibold px-2 py-0.5 rounded-full bg-zinc-50 text-zinc-600">Routine</span>
+                            <span class="text-xs text-slate-500">IT Infrastruktur</span>
+                        </div>
+                        <h3 class="font-medium text-slate-900">Wöchentliches Server-Backup verifizieren</h3>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="flex -space-x-2">
+                            <div
+                                class="w-8 h-8 rounded-full bg-green-50 border-2 border-white flex items-center justify-center text-xs font-medium text-green-700">
+                                IT</div>
+                        </div>
+                        <span class="text-sm text-slate-400">Freitag</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
