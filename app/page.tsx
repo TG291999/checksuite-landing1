@@ -72,7 +72,7 @@ export default function Home() {
             </div>
 
             {/* Hero Screenshot */}
-            <div className="mt-16 rounded-xl overflow-hidden shadow-2xl border border-slate-200 bg-slate-50">
+            <div className="mt-16 rounded-xl overflow-hidden shadow-[0_20px_50px_-12px_rgba(109,40,217,0.2)] border border-[#6D28D9]/20 bg-slate-50">
               <img
                 src="/assets/dashboard-view.png"
                 alt="CheckSuite Dashboard - Struktur und Ordnung auf einen Blick"
@@ -147,7 +147,7 @@ export default function Home() {
             {/* Feature 1: Checklists */}
             <div className="flex flex-col lg:flex-row items-center gap-12 mb-24">
               <div className="lg:w-1/2">
-                <div className="rounded-xl overflow-hidden shadow-xl border border-slate-200 bg-slate-50">
+                <div className="rounded-xl overflow-hidden shadow-[0_20px_50px_-12px_rgba(109,40,217,0.15)] border border-[#6D28D9]/20 bg-slate-50">
                   <img
                     src="/assets/checklist-view.png"
                     alt="CheckSuite Listen - Nichts vergessen"
@@ -181,7 +181,7 @@ export default function Home() {
             {/* Feature 2: Tasks */}
             <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
               <div className="lg:w-1/2">
-                <div className="rounded-xl overflow-hidden shadow-xl border border-slate-200 bg-slate-50">
+                <div className="rounded-xl overflow-hidden shadow-[0_20px_50px_-12px_rgba(109,40,217,0.15)] border border-[#6D28D9]/20 bg-slate-50">
                   <img
                     src="/assets/task-view.png"
                     alt="CheckSuite Aufgaben - Klare Verantwortung"
