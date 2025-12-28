@@ -94,8 +94,7 @@ export default function Home() {
 
           {/* Hero Visual */}
           <div className="mt-16 relative max-w-6xl mx-auto">
-            <div className="absolute -inset-4 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-[2rem] blur-3xl opacity-20 -z-10"></div>
-            <div className="rounded-2xl overflow-hidden border border-[#6D28D9]/10 bg-white/50 shadow-[0_40px_80px_-20px_rgba(109,40,217,0.15)] ring-1 ring-slate-900/5">
+            <div className="rounded-2xl overflow-hidden">
               <img
                 src="/assets/dashboard-view.png"
                 alt="CheckSuite Dashboard"
@@ -247,7 +246,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="lg:w-1/2">
-                <div className="rounded-2xl overflow-hidden border border-[#6D28D9]/10 shadow-[0_20px_60px_-15px_rgba(109,40,217,0.15)] bg-[#faf5ff] p-2">
+                <div className="rounded-2xl overflow-hidden p-2">
                   <img src="/assets/dashboard-view.png" className="rounded-xl w-full h-auto" alt="Dashboard" />
                 </div>
               </div>
@@ -272,7 +271,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className="lg:w-1/2">
-                <div className="rounded-2xl overflow-hidden border border-[#6D28D9]/10 shadow-[0_20px_60px_-15px_rgba(109,40,217,0.15)] bg-[#faf5ff] p-2">
+                <div className="rounded-2xl overflow-hidden p-2">
                   <img src="/assets/checklist-view.png" className="rounded-xl w-full h-auto" alt="Checklist" />
                 </div>
               </div>
@@ -295,7 +294,7 @@ export default function Home() {
                 </Button>
               </div>
               <div className="lg:w-1/2">
-                <div className="rounded-2xl overflow-hidden border border-[#6D28D9]/10 shadow-[0_20px_60px_-15px_rgba(109,40,217,0.15)] bg-[#faf5ff] p-2">
+                <div className="rounded-2xl overflow-hidden p-2">
                   <img src="/assets/task-view.png" className="rounded-xl w-full h-auto" alt="Task Detail" />
                 </div>
               </div>
