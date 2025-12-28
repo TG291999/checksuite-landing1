@@ -74,7 +74,7 @@ export default function Home() {
             {/* Hero Screenshot */}
             <div className="mt-16 rounded-xl overflow-hidden shadow-2xl border border-slate-200 bg-slate-50">
               <img
-                src="/assets/dashboard-view.svg"
+                src="/assets/dashboard-view.png"
                 alt="CheckSuite Dashboard - Struktur und Ordnung auf einen Blick"
                 className="w-full h-auto"
                 width={1440}
@@ -149,7 +149,7 @@ export default function Home() {
               <div className="lg:w-1/2">
                 <div className="rounded-xl overflow-hidden shadow-xl border border-slate-200 bg-slate-50">
                   <img
-                    src="/assets/checklist-view.svg"
+                    src="/assets/checklist-view.png"
                     alt="CheckSuite Listen - Nichts vergessen"
                     className="w-full h-auto"
                     loading="lazy"
@@ -183,7 +183,7 @@ export default function Home() {
               <div className="lg:w-1/2">
                 <div className="rounded-xl overflow-hidden shadow-xl border border-slate-200 bg-slate-50">
                   <img
-                    src="/assets/task-view.svg"
+                    src="/assets/task-view.png"
                     alt="CheckSuite Aufgaben - Klare Verantwortung"
                     className="w-full h-auto"
                     loading="lazy"
