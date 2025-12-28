@@ -41,11 +41,11 @@ export default function Home() {
             <Link href="#faq" className="hover:text-[#6D28D9] transition-colors">FAQ</Link>
           </nav>
           <div className="flex items-center gap-4">
-            <Link href="/login" className="hidden text-sm font-medium text-slate-600 hover:text-slate-900 sm:block">
+            <Link href="https://app.checksuite.de" className="hidden text-sm font-medium text-slate-600 hover:text-slate-900 sm:block">
               Login
             </Link>
-            <Button asChild className="bg-[#6D28D9] hover:bg-[#5b21b6] text-white">
-              <Link href="https://app.checksuite.de/signup">Jetzt starten</Link>
+            <Button asChild className="bg-[#6D28D9] hover:bg-[#5b21b6] text-white border-none transition-all duration-200">
+              <Link href="https://app.checksuite.de">Jetzt starten</Link>
             </Button>
           </div>
         </div>
@@ -63,12 +63,23 @@ export default function Home() {
               CheckSuite bringt Ordnung in wiederkehrende Prozesse – mit Pflicht-Checklisten, Vorlagen und klaren Verantwortlichkeiten.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button asChild size="lg" className="h-12 px-8 text-base bg-[#6D28D9] hover:bg-[#5b21b6]">
-                <Link href="https://app.checksuite.de/signup">Jetzt starten <ArrowRight className="ml-2 h-4 w-4" /></Link>
+              <Button asChild size="lg" className="h-12 px-8 text-base bg-[#6D28D9] hover:bg-[#5b21b6] text-white border-none transition-all duration-200">
+                <Link href="https://app.checksuite.de">Jetzt starten <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="h-12 px-8 text-base border-slate-200 text-slate-700 hover:bg-slate-50 hover:text-slate-900">
+              <Button asChild size="lg" variant="default" className="h-12 px-8 text-base bg-slate-900 hover:bg-slate-800 text-white border-none transition-all duration-200">
                 <Link href="#pricing">Preise ansehen</Link>
               </Button>
+            </div>
+
+            {/* Hero Screenshot */}
+            <div className="mt-16 rounded-xl overflow-hidden shadow-2xl border border-slate-200 bg-slate-50">
+              <img
+                src="/assets/dashboard-view.svg"
+                alt="CheckSuite Dashboard - Struktur und Ordnung auf einen Blick"
+                className="w-full h-auto"
+                width={1440}
+                height={900}
+              />
             </div>
 
             {/* Social Proof / Trust (Optional Placeholder) */}
@@ -124,7 +135,7 @@ export default function Home() {
         {/* --- FEATURES SECTION --- */}
         <section id="features" className="py-24">
           <div className="container px-4 md:px-6 mx-auto">
-            <div className="text-center mb-16 max-w-3xl mx-auto">
+            <div className="text-center mb-20 max-w-3xl mx-auto">
               <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
                 Die Lösung: CheckSuite
               </h2>
@@ -132,48 +143,75 @@ export default function Home() {
                 Einfach, strukturiert und ohne Schnickschnack. Alles, was du brauchst, um Prozesse zu meistern.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  icon: LayoutTemplate,
-                  title: "Prozesse als Templates",
-                  desc: "Erstelle Vorlagen für wiederkehrende Aufgaben. Einmal definiert, immer perfekt ausgeführt."
-                },
-                {
-                  icon: Shield,
-                  title: "Pflicht-Checklisten",
-                  desc: "Stelle sicher, dass nichts vergessen wird. Aufgaben können erst abgeschlossen werden, wenn alles abgehakt ist."
-                },
-                {
-                  icon: Users,
-                  title: "Klare Verantwortlichkeiten",
-                  desc: "Jeder Schritt hat einen Besitzer. Weise Aufgaben präzise zu und vermeide Missverständnisse."
-                },
-                {
-                  icon: BarChart3,
-                  title: "Status & Übersicht",
-                  desc: "Visuelle Kanban-Boards zeigen dir sofort, wo es hakt und was als nächstes ansteht."
-                },
-                {
-                  icon: Clock,
-                  title: "Wiederkehrende Vorgänge",
-                  desc: "Starte Routineprozesse auf Knopfdruck. Perfekt für Onboarding, Monatsabschlüsse oder Wartung."
-                },
-                {
-                  icon: Zap,
-                  title: "Extrem einfach",
-                  desc: "Kein tagelanges Setup. Startbereit in wenigen Minuten. Keine Schulung notwendig."
-                }
-              ].map((feature, i) => (
-                <div key={i} className="group p-8 rounded-2xl border border-slate-200 hover:border-[#6D28D9]/30 hover:shadow-lg transition-all bg-white">
-                  <div className="h-12 w-12 bg-slate-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#6D28D9]/10 transition-colors">
-                    <feature.icon className="h-6 w-6 text-slate-700 group-hover:text-[#6D28D9] transition-colors" />
-                  </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-3">{feature.title}</h3>
-                  <p className="text-slate-600">{feature.desc}</p>
+
+            {/* Feature 1: Checklists */}
+            <div className="flex flex-col lg:flex-row items-center gap-12 mb-24">
+              <div className="lg:w-1/2">
+                <div className="rounded-xl overflow-hidden shadow-xl border border-slate-200 bg-slate-50">
+                  <img
+                    src="/assets/checklist-view.svg"
+                    alt="CheckSuite Listen - Nichts vergessen"
+                    className="w-full h-auto"
+                    loading="lazy"
+                  />
                 </div>
-              ))}
+              </div>
+              <div className="lg:w-1/2">
+                <div className="h-12 w-12 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
+                  <Shield className="h-6 w-6 text-[#6D28D9]" />
+                </div>
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">Pflicht-Checklisten & Prozesse</h3>
+                <p className="text-lg text-slate-600 leading-relaxed mb-6">
+                  Erstelle Vorlagen für wiederkehrende Aufgaben. Einmal definiert, immer perfekt ausgeführt.
+                  Stelle sicher, dass nichts vergessen wird – Aufgaben können erst abgeschlossen werden, wenn alles abgehakt ist.
+                </p>
+                <ul className="space-y-3 text-slate-600">
+                  <li className="flex items-start gap-3">
+                    <Check className="h-5 w-5 text-[#6D28D9] shrink-0 mt-0.5" />
+                    <span>Wiederkehrende Prozesse automatisieren</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="h-5 w-5 text-[#6D28D9] shrink-0 mt-0.5" />
+                    <span>Integrierte Anleitungen & Wikis</span>
+                  </li>
+                </ul>
+              </div>
             </div>
+
+            {/* Feature 2: Tasks */}
+            <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
+              <div className="lg:w-1/2">
+                <div className="rounded-xl overflow-hidden shadow-xl border border-slate-200 bg-slate-50">
+                  <img
+                    src="/assets/task-view.svg"
+                    alt="CheckSuite Aufgaben - Klare Verantwortung"
+                    className="w-full h-auto"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <div className="lg:w-1/2">
+                <div className="h-12 w-12 bg-yellow-100 rounded-xl flex items-center justify-center mb-6">
+                  <Users className="h-6 w-6 text-yellow-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">Klare Verantwortlichkeiten</h3>
+                <p className="text-lg text-slate-600 leading-relaxed mb-6">
+                  Jeder Schritt hat einen Besitzer. Weise Aufgaben präzise zu und vermeide Missverständnisse.
+                  Mitarbeiter wissen sofort, was zu tun ist, ohne unnötige Rückfragen.
+                </p>
+                <ul className="space-y-3 text-slate-600">
+                  <li className="flex items-start gap-3">
+                    <Check className="h-5 w-5 text-[#6D28D9] shrink-0 mt-0.5" />
+                    <span>Eindeutige Zuweisung</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="h-5 w-5 text-[#6D28D9] shrink-0 mt-0.5" />
+                    <span>Prioritäten & Deadlines</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
           </div>
         </section>
 
@@ -245,8 +283,8 @@ export default function Home() {
                   <li className="flex gap-3"><Check className="h-5 w-5 text-[#6D28D9] shrink-0" /> 3 aktive Boards</li>
                   <li className="flex gap-3"><Check className="h-5 w-5 text-[#6D28D9] shrink-0" /> Basis-Templates</li>
                 </ul>
-                <Button asChild className="mt-8 w-full bg-slate-900 hover:bg-slate-800">
-                  <Link href="https://app.checksuite.de/signup">Kostenlos starten</Link>
+                <Button asChild className="mt-8 w-full bg-slate-900 hover:bg-slate-800 text-white border-none">
+                  <Link href="https://app.checksuite.de">Kostenlos starten</Link>
                 </Button>
               </div>
 
@@ -267,8 +305,8 @@ export default function Home() {
                   <li className="flex gap-3"><Check className="h-5 w-5 text-[#6D28D9] shrink-0" /> Erweiterte Rechte</li>
                   <li className="flex gap-3"><Check className="h-5 w-5 text-[#6D28D9] shrink-0" /> Priorisierter Support</li>
                 </ul>
-                <Button asChild className="mt-8 w-full bg-[#6D28D9] hover:bg-[#5b21b6]">
-                  <Link href="https://app.checksuite.de/signup">Jetzt wechseln</Link>
+                <Button asChild className="mt-8 w-full bg-[#6D28D9] hover:bg-[#5b21b6] text-white border-none">
+                  <Link href="https://app.checksuite.de">Jetzt wechseln</Link>
                 </Button>
               </div>
 
@@ -332,7 +370,7 @@ export default function Home() {
               Schließe dich hunderten Teams an, die ihre Prozesse mit CheckSuite meistern.
             </p>
             <Button asChild size="lg" className="h-14 px-10 text-lg bg-white text-[#6D28D9] hover:bg-slate-100 border-none font-bold">
-              <Link href="https://app.checksuite.de/signup">Kostenlos starten</Link>
+              <Link href="https://app.checksuite.de">Kostenlos starten</Link>
             </Button>
             <p className="mt-6 text-sm text-white/60">Keine Kreditkarte erforderlich • Sofortiger Zugriff</p>
           </div>
