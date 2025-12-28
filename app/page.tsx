@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Check, ChevronDown, LayoutTemplate, ListTodo, Shield, Users, Zap, Menu, FileText, BarChart3, Clock, Lock } from "lucide-react";
+import { ArrowRight, Check, LayoutTemplate, ListTodo, Shield, Users, Zap, FileText, BarChart3, Clock } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -36,7 +36,7 @@ export default function Home() {
           </div>
           <nav className="hidden md:flex gap-6 text-sm font-medium text-slate-600">
             <Link href="#features" className="hover:text-[#6D28D9] transition-colors">Features</Link>
-            <Link href="#how-it-works" className="hover:text-[#6D28D9] transition-colors">So geht's</Link>
+            <Link href="#how-it-works" className="hover:text-[#6D28D9] transition-colors">So geht&apos;s</Link>
             <Link href="#pricing" className="hover:text-[#6D28D9] transition-colors">Preise</Link>
             <Link href="#faq" className="hover:text-[#6D28D9] transition-colors">FAQ</Link>
           </nav>
@@ -114,7 +114,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">Keine Verantwortung</h3>
                 <p className="text-slate-600 leading-relaxed">
-                  "Ich dachte, du machst das." Aufgabendelegation ohne klares System führt zu Frust.
+                  &quot;Ich dachte, du machst das.&quot; Aufgabendelegation ohne klares System führt zu Frust.
                 </p>
               </div>
             </div>
